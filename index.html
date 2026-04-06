@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodFinder</title>
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   <header>
+    <!-- Logo -->
+    <a href="#home" class="logo">
+    <img src="resources/FoodFinder_logo.png" class="logo-img"> FoodFinder</a>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#Categories">Categories</a></li>
+            <li><a href="#About-the-Project">About the Project</a></li>
+            <li><a href="#Features">Features</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="home-overlay">
+            <div class="home-content">
+                <h1>Find your next favorite bite</h1>
+                <p>Find deliciously crafted food near you.</p>
+
+                <!-- Search Bar -->
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category -->
+    <section class="categories" id="Categories">
+        <h2>Explore by Category</h2>
+        <div class="category-tiles">
+            <div class="category-tile" data-category="Filipino Cuisine">
+                <img src="resources/Filipino-Cuisine.jpg" alt="">
+                <h3>Filipino Cuisine</h3>
+            </div>
+
+            <div class="category-tile" data-category="Japanese Cuisine">
+                <img src="resources/Japanese Cuisine.jpg" alt="">
+                <h3>Japanese Cuisine</h3>
+            </div>
+
+            <div class="category-tile" data-category="American Cuisine">
+                <img src="resources/American Cuisine.jpg" alt="">
+                <h3>American Cuisine</h3>
+            </div>
+
+            <div class="category-tile" data-category="Korean Cuisine">
+                <img src="resources/Korean Cuisine.jpg" alt="">
+                <h3>Korean Cuisine</h3>
+            </div>
+
+            <div class="category-tile" data-category="Chinese Cuisine">
+                <img src="resources/Chinese Cuisine.jpg" alt="">
+                <h3>Chinese Cuisine</h3>
+            </div>
+
+            <div class="category-tile" data-category="Italian Cuisine">
+                <img src="resources/Italian Cuisine.jpg" alt="">
+                <h3>Italian Cuisine</h3>
+            </div>
+
+            <div class="category-tile" data-category="FastFood">
+                <img src="resources/FastFood.jpeg" alt="">
+                <h3>Fast Food</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant List -->
+    <section class="restaurant-list" id="restaurant-list">
+        <h2>Places to Eat</h2>
+
+        <div class="restaurants-container">
+        </div>
+
+        <!-- Restaurant Details (Foods + Branches) -->
+        <div class="restaurant-details" id="restaurant-details" style="display:none;">
+            <h2 id="details-title"></h2>
+
+            <div style="display:flex; gap:40px; flex-wrap:wrap; margin-top:20px; justify-content: space-between;">
+                <!-- Foods Column -->
+                <div style="flex:1;">
+                    <h3>Foods</h3>
+                    <ul id="foods-list"></ul>
+                </div>
+
+                <!-- Branches Column -->
+                <div style="flex:1;">
+                    <h3>Branches & Ratings</h3>
+                    <ul id="branches-list"></ul>
+                </div>
+            </div>
+        </div>
+        </section>
+
+    <!-- About the Project -->
+    <section class="about" id="About-the-Project">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About FoodFinder</h2>
+                <p>
+                    FoodFinder is a restaurant locator website designed to help you discover the best restaurants, 
+                    and dishes near you. Search by category, filter by cuisine, and find detailed information including 
+                    location and images of your favorite restaurants.
+                </p>
+                <p>
+                    Whether you're looking for local favorites, international cuisines, or hidden gems, FoodFinder 
+                    provides an easy and interactive way to explore dining options in your city.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="Features">
+        <h2>Our Features</h2>
+        <div class="features-container">
+            <div class="feature-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <h3>Search Function</h3>
+                <p>Search Foods Nearby - Users can search for restaurants near their location</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fa-solid fa-filter"></i>
+                <h3>Category Filter</h3>
+                <p>Explore by Category - Browse restaurants by cuisine categories.</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Location Details</h3>
+                <p>Discover restaurants with location details.</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fa-solid fa-star"></i>
+                <h3>Rating</h3>
+                <p>Explore popular and recommended restaurants easily.</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Simple and Easy</h3>
+                <p>User-Friendly Design - Simple and easy to navigate the interface</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="Contact">
+    <h2>Contact</h2>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+            <h3>Gil Nino Acera</h3>
+            <p>UI Designer / Frontend</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Britt Annika Open</h3>
+            <p>Backend Developer </p>
+        </div>
+
+        <div class="contact-card">
+            <h3>John Louis Halandumon</h3>
+            <p>Research & Data</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Jomadyane Masinger</h3>
+            <p>Documentation</p>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Navigation Script -->
+        <script>
+        const menuIcon = document.getElementById("menu-icon");
+        const navbar = document.querySelector(".navbar");
+
+        if(menuIcon){
+            menuIcon.addEventListener("click", () => {
+                navbar.classList.toggle("active");
+            });
+        }
+    </script>
+
+    <!-- Restaurants & Category Script -->
+    <script>
+    // Restaurant Arrays
+            const restaurants = [
+                {name: "Kagay-Anon Restaurant", category: "Filipino Cuisine", location: "Cagayan de Oro", img: "resources/Kagay-Anon Restaurant.jpg"},
+                {name: "Sentro 1850", category: "Filipino Cuisine", location: "Cagayan de Oro", img: "resources/Sentro1850.jpg"},
+                {name: "Panagatan", category: "Filipino Cuisine", location: "Cagayan de Oro", img: "resources/Panagatan.jpeg"},
+                {name: "POPS CDO Buffet", category: "Filipino Cuisine", location: "Cagayan de Oro", img: "resources/POPS.jpeg"},
+                {name: "Yurika Japanese Restaurant", category: "Japanese Cuisine", location: "Cagayan de Oro", img: "resources/YurikaJapaneseRestaurant.jpeg"},
+                {name: "Yoshimeatsu", category: "Japanese Cuisine", location: "Cagayan de Oro", img: "resources/Yoshimeatsu.jpeg"},
+                {name: "Hakata Japanese Restaurant", category: "Japanese Cuisine", location: "Cagayan de Oro", img: "resources/Hakata.jpeg"},
+                {name: "Botejyu", category: "Japanese Cuisine", location: "SM CDO Downtown, Claro M. Recto Ave,Cagayan de Oro", img: "resources/Botejyu.jpg"},
+                {name: "Pizza Hut", category: "American Cuisine", location: "Cagayan de Oro", img: "resources/Pizza Hut.jpg"},
+                {name: "Tong Yang", category: "Chinese Cuisine", location: "Cagayan de Oro", img: "resources/Tong Yang.jpg"},
+                {name: "Cusina Higala", category: "Filipino Cuisine", location: "Cagayan de Oro", img: "resources/Cucina Higala.jpg"},
+                {name: "Ribs and Bibs Restaurant", category: "American Cuisine", location: "Cagayan de Oro", img: "resources/Ribs and Bibs.jpg"},
+                {name: "Giwa Korean Grill Restaurant", category: "Korean Cuisine", location: "Cagayan de Oro", img: "resources/Giwa Grill.jpg"},
+                {name: "Demetrio's Pizzeria", category: "Italian Cuisine", location: "Cagayan de Oro", img: "resources/Demetrio's Pizzeria.jpg"},
+                {name: "SilverRain Restaurant", category: "Korean Cuisine", location: "Cagayan de Oro", img: "resources/Silver Rain.jpg"},
+                {name: "Missy Bon Bon", category: "American Cuisine", location: "Cagayan de Oro", img: "resources/Missy Bon Bon.jpg"},
+                {name: "Romantic Baboy", category: "Korean Cuisine", location: "Cagayan de Oro", img: "resources/RomanticBaboy.jpeg"},
+                {name: "Seoul Flavors Kitchen", category: "Korean Cuisine", location: "Cagayan de Oro", img: "resources/Seoul.png"},
+                {name: "Mandarin Tea Garden", category: "Chinese Cuisine", location: "Cagayan de Oro", img: "resources/Mandarin.jpeg"},
+                {name: "House of Yang", category: "Chinese Cuisine", location: "Cagayan de Oro", img: "resources/HouseofYang.jpeg"},
+                {name: "Grand Caprice", category: "Chinese Cuisine", location: "Cagayan de Oro", img: "resources/GrandCaprice.jpeg"},
+                {name: "Sopraffino Italian Pizza", category: "Italian Cuisine", location: "Cagayan de Oro", img: "resources/SopraffinoItalianPizza.png"},
+                {name: "Chef Carmine's", category: "Italian Cuisine", location: "Cagayan de Oro", img: "resources/Chef Carmines.png"},
+    ];
+
+            const fastFoodRestaurants = [
+                {name: "Jollibee", category: "FastFood", location: "Cagayan de Oro", img: "resources/Jollibee.jpeg"},
+                {name: "Mc Donalds", category: "FastFood", location: "Cagayan de Oro", img: "resources/McDonalds.jpeg"},
+                {name: "Chowking", category: "FastFood", location: "Cagayan de Oro", img: "resources/Chowking.jpeg"},
+                {name: "Burger King", category: "FastFood", location: "Cagayan de Oro", img: "resources/BurgerKing.jpeg"},
+                {name: "Mang Inasal", category: "FastFood", location: "Cagayan de Oro", img: "resources/MangInasal.jpeg"},
+    ];
+
+    // Restaurant Details
+    const restaurantDetails = {
+            "Jollibee": {
+            foods:["Chicken Joy","Jolly Spaghetti","Burger Steak","Yum Burger","Jolly Hotdog","Palabok Fiesta", "Jolly Crispy Fries","Halo-Halo","Jolly Kiddie Meal","Burger Yum with Cheese","Popular drinks/snacks:","Jolly Coffee, Jolly Float, Peach Mango Pie"],
+            branches:[
+                {name:"Divisoria", rating:4.5},
+                {name:"SM Downtown", rating:4.3},
+                {name:"Ayala Centrio Mall", rating:4.9},
+                {name:"Gaisano City", rating:4.9},
+                {name:"Gaisano Mall", rating:4.9},
+                {name:"Carmen Vamenta", rating:4.9},
+                {name:"MOGHS", rating:4.9},
+                {name:"Limketkai", rating:4.9},
+                {name:"Kauswagan, Highway", rating:4.9},
+                {name:"Ororama, Cogon", rating:4.9},
+                {name:"Cogon", rating:4.9},
+                {name:"Gusa, Highway", rating:4.9}
+
+            ]
+        },
+            "Mc Donalds": {
+            foods:["Big Mac","Mc Chicken","Quarter Pounder with Cheese","Burger McDo", "Chicken McDo", "Fries", "McSpaghetti","Sundae", "Hotcakes", "McFloat","Pie (Apple / Chocolate), Breakfast Sandwiches"],
+            branches:[
+                {name:"Limketkai", rating:4.4},
+                {name:"SM Downtown", rating:4.2},
+                {name:"Xavier", rating:4.9},
+                {name:"Kauswagan, Highway", rating:4.9},
+                {name:"Ororama, Cogon", rating:4.9},
+                {name:"Gusa, Highway", rating:4.9}
+            ]
+        },
+            "Kagay-Anon Restaurant": {
+            foods:["Ostrich Salpicao","Kinilaw","Grilled Tuna Panga / Belly","Sizzling Squid & Seafood Medleys","Pinakbet","Chicharon Bulaklak"],
+            branches:[
+                {name:"Level 2, Limketkai Center, Cagayan de Oro Cityanch", rating:4.2}
+            ]
+        },
+            "Sentro 1850": {
+            foods:["Asado Macau Pork Belly","Eggplant Adobo","Roast Duck Tikoy","Ribs, Smoked Barbecue & Grilled Pork/Beef","Crabstick Wasabi Salad, Spaghetti, Nachos"],
+            branches:[
+                {name:"Don A. Velez St., Divisoria (near CDO downtown).", rating:4.4}
+            ]
+        },
+            "Panagatan": {
+            foods:["Grilled Squid & Grilled Fish","Kilawin / Kinilaw na Tuna","Baked Scallops","Seafood Tinola & Sinigang na Isda","Halaan (Clam) Soup, Fried Hito (Catfish)","Group “Bilao” Specials","Calamares",],
+            branches:[
+                {name:"Opol Coastal Branch", rating:4.2},
+                {name:"SM CDO Downtown Premier (5F)", rating:3.6},
+                {name:"SM City Uptown", rating:2.9}
+            ]
+        },
+            "POPS CDO Buffet": {
+            foods:["Adobo, Lechon Kawali, Pancit, Fried Fish","Filipino desserts & side dishes"],
+            branches:[
+                {name:"2F, SM CDO Downtown (Claro M. Recto Ave), Cagayan de Oro City.", rating:4.0}
+            ]
+        },
+            "Cusina Higala": {
+            foods:["Sinuglaw","Humba de Oro","Kare-Kare","Kinilaw, Surol","Wagyu Beef Brisket Rendang","Sizzling Binaki with Caramel Sauce"],
+            branches:[
+                {name:"222 Capistrano Street, Cagayan de Oro City", rating:4.7}
+            ]
+        },
+            "Yurika Japanese Restaurant": {
+            foods:["ramen","donburi","Adobo","katsu","sushi rolls","gyoza"],
+            branches:[
+                {name:"Masterson Avenue, Cagayan de Oro City", rating:4.7}
+            ]
+        },
+            "Yoshimeatsu": {
+            foods:["Japanese-style yakiniku / grilled meats","donbMeats (beef, pork), seafood, sides, rice, and fusion optionsuri","Lots of meat choices with dipping sauces and sides — great for groups or pairs"],
+            branches:[
+                {name:"Capt. Vicente Roa St., Ayala Mall Centrio, Cagayan de Oro City", rating:4.7}
+            ]
+        },
+            "Hakata Japanese Restaurant": {
+            foods:["Hakata-style Japanese ramen - Japanese appetizers and sides often paired with ramen (like tempura or rice bowls)"],
+            branches:[
+                {name:"Ground Level, ConEx Building, Rizal St., Cagayan de Oro City", rating:5.0}
+            ]
+        },
+            "Botejyu": {
+            foods:["Okonomiyaki","Takoyaki","ramen","sushi","donburi rice bowls","Teppanyaki grilled dishes"],
+            branches:[
+                {name:"Ground Floor, SM CDO Downtown, Claro M. Recto Ave., Cagayan de Oro City", rating:4.7}
+            ]
+        },
+
+            "Pizza Hut": {
+            foods:["Hawaiian","Cheese Lovers","Super Supreme"],
+            branches:[
+                {name:"SM Cagayan de Oro (Mastersons Ave)", rating:5.0},
+                {name:"Plaza Divisoria)", rating:3.4}
+            ]
+        },
+            "Ribs and Bibs Restaurant": {
+            foods:["baby back ribs","ribeye steaks","grilled chicken","quesadillas","scallops","salads","pasta"],
+            branches:[
+                {name:"Level 5, SM Downtown Premier", rating:5.0}
+            ]
+        },
+            "Missy Bon Bon": {
+            foods:["breads","pastries","sweets"],
+            branches:[
+                {name:"Robinsons Rosario (Limketkai)", rating:5.0},
+                {name:"Polymedic Medical Plaza", rating:4.3}
+            ]
+        },
+            "Giwa Korean Grill Restaurant": {
+            foods:["Samgyup"],
+            branches:[
+                {name:"Masterson Ave area", rating:4.7}
+            ]
+        },
+            "SilverRain Restaurants": {
+            foods:["bulgogi","soups","kimchi","grilled meats"],
+            branches:[
+                {name:"19 Masterson Ave, Upper Canitoan", rating:4.7}
+            ]
+        },
+            "Romantic Baboy": {
+            foods:["UNLI grilled meats","samgyupsal","seafood & side dishes"],
+            branches:[
+                {name:"Limketkai Center, Rosario Arcade", rating:4.7}
+            ]
+        },
+            "Seoul Flavors Kitchen": {
+            foods:["soups","grilled meats","rice bowls"],
+            branches:[
+                {name:"Pueblo de Oro Business Park", rating:4.7}
+            ]
+        },
+            "Tong Yang": {
+            foods:["Chinese/Asian hotpot & grill buffet","shabu‑shabu with wide choices of meats, vegetables, and sides"],
+            branches:[
+                {name:"3F, SM Downtown Premier", rating:4.7}
+            ]
+        },
+            "Mandarin Tea Garden": {
+            foods:["Chinese/Asian dishes"],
+            branches:[
+                {name:"SM City CDO Uptown", rating:4.8},
+                {name:"Gaisano Mall", rating:4.6},
+                {name:"Limketkai Robinsons", rating:4.5}
+            ]
+        },
+            "House of Yang": {
+            foods:["Chinese/Asian dishes","lunch & dinner mains"],
+            branches:[
+                {name:"Limketkai Center", rating:4.7}
+            ]
+        },
+            "Grand Caprice": {
+            foods:["Chinese/Asian dishes","lunch & dinner mains"],
+            branches:[
+                {name:"Main Branch", rating:4.7}
+            ]
+        },
+            "Demetrio's Pizzeria": {
+            foods:["Spinachi","Alohawaiian","Four Cheese"],
+            branches:[
+                {name:"Pueblo de Oro Township (Corner Regatta Blvd)", rating:4.7}
+            ]
+        },
+            "Sopraffino Italian Pizza": {
+            foods:["pepperoni","margherita"],
+            branches:[
+                {name:"J. Seriña St", rating:4.7}
+            ]
+        },
+            "Chef Carmine's": {
+            foods:["Pasta","Chicken Parmigiana","Tuscan dishes","Meat Platters"],
+            branches:[
+                {name:"Uptown Condotel, Masterson Ave", rating:4.7}
+            ]
+        },
+            "Chowking": {
+            foods:["Chao Fan", "Sweet & Sour Pork", "Siomai","Siopao","Halo-Halo","Chicken or Beef Mami","Lomi","Bihon Guisado","Dimsum assortment","Fried Dumplings / Wanton","Drinks like Milk Tea, Chinese-style soft drinks"],
+            branches:[
+                {name:"Gaisano City Mall", rating:4.3},
+                {name:"Carmen Vamenta", rating:4.7},
+                {name:"Divisoria", rating:4.5},
+                {name:"Ororama, Cogon", rating:4.2}
+            ]
+        },
+            "Burger King": {
+            foods:["Whopper","Cheeseburger","Bacon King","Chicken Royale / Chicken Sandwich","BK Chicken Fries","Onion Rings","French Fries","BK Sundae",
+                   "Rodeo Burger","King Nuggets, Breakfast Croissant Sandwich"],
+            branches:[
+                {name:"SM CDO Downtown Premier", rating:4.9},
+                {name:"Divisoria", rating:4.9} 
+            ]
+        },
+            "Mang Inasal": {
+            foods:["Chicken Inasal","Pork BBQ Skewers", "Liempo", "Unli Rice", "Halo-Halo","Chicken Inasal Meal with sides","Breakfast (Tapa, Longganisa, Tocino)","Puto","Inihaw na Bangus", "Drinks: Iced Tea, Soft Drinks","Vegetable sides like Ensaladang Talong, Atsara"],
+            branches:[
+                {name:"Divisoria", rating:4.6},
+                {name:"SM CDO Downtown Premier", rating:4.3},
+                {name:"Ayala Centrio Mall", rating:4.5},
+                {name:"Gaisano City", rating:4.3},
+                {name:"Limketkai", rating:4.7},
+                {name:"Ororama, Cogon", rating:4.2}
+            ]
+        },  
+    };
+
+                // References
+                const tiles = document.querySelectorAll(".category-tile");
+                const container = document.querySelector(".restaurants-container");
+
+                // Display Function (merged restaurants + fast food)
+                function displayRestaurants(category) {
+                container.innerHTML = "";
+                const allRestaurants = [...restaurants, ...fastFoodRestaurants];
+
+                const filtered = category === "all" ? allRestaurants
+                        : allRestaurants.filter(r => r.category === category);
+
+                filtered.forEach(r => {
+                const card = document.createElement("div");
+                card.classList.add("restaurant-card");
+
+                card.innerHTML = `
+                <img src="${r.img}" alt="${r.name}">
+                <div class="restaurant-info">
+                    <h3>${r.name}</h3>
+                    <p>${r.location}</p>
+                </div>
+                `;
+
+                // Click event with toggle & scroll only if needed
+                card.addEventListener("click", () => {
+                const detailsContainer = document.getElementById("restaurant-details");
+                const detailsTitle = document.getElementById("details-title");
+                const foodsList = document.getElementById("foods-list");
+                const branchesList = document.getElementById("branches-list");
+
+                const details = restaurantDetails[r.name] || {
+                    foods:["No food data yet"],
+                    branches:[{name:"No branch data yet", rating:"N/A"}]
+                };
+
+                // Toggle: hide if same restaurant clicked again
+                if (detailsTitle.textContent === r.name && detailsContainer.style.display === "block") {
+                    detailsContainer.style.display = "none";
+                    return;
+                }
+
+                // Show the details
+                detailsContainer.style.display = "block";
+                detailsTitle.textContent = r.name;
+                detailsTitle.style.color = "#000"; // black title
+
+                // Clear previous lists
+                foodsList.innerHTML = "";
+                branchesList.innerHTML = "";
+
+                // Populate foods
+                details.foods.forEach(food => {
+                    const li = document.createElement("li");
+                    li.textContent = food;
+                    foodsList.appendChild(li);
+                });
+
+                // Populate branches & ratings
+                details.branches.forEach(branch => {
+                    const li = document.createElement("li");
+                    li.textContent = branch.name + " ⭐ " + branch.rating;
+                    branchesList.appendChild(li);
+                });
+
+                // Scroll only if not fully visible
+                const rect = detailsContainer.getBoundingClientRect();
+                const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+                if (!isVisible) {
+                    detailsContainer.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+
+                container.appendChild(card);
+        });
+    }
+
+                // Initialize: show all restaurants
+                displayRestaurants("all");
+
+                // Category Interaction
+                tiles.forEach(tile => {
+                tile.addEventListener("click", () => {
+                const category = tile.getAttribute("data-category");
+
+                if(tile.classList.contains("active")) {
+                tile.classList.remove("active");
+                displayRestaurants("all");
+                } else {
+                tiles.forEach(t => t.classList.remove("active"));
+                tile.classList.add("active");
+                displayRestaurants(category);
+            }
+        });
+    });
+    </script>
+    
+</body>
+</html>
